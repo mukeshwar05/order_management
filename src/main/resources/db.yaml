@@ -1,0 +1,7 @@
+tenents:
+    datasources:
+        localhost:
+            jdbcUrl: jdbc:mysql://localhost:3308/order
+            driverClassName: com.mysql.cj.jdbc.Driver
+            username: root
+            password: 

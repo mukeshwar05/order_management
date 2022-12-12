@@ -1,0 +1,42 @@
+api:
+  order:
+  - name: createOrder
+    type: statement
+    query: insert into order_user_mapping(user_id,actual_price,refundable_amount) values (?,?,?)
+    paramType: integer,integer,integer
+    
+  - name: readOrderByUserId
+    type: query
+    query: select * from order_user_mapping where user_id=?
+    paramType: integer
+    
+  - name: readUserCount
+    type: query
+    query: select count(*) as userCount from order_user_mapping where user_id=?
+    paramType: integer
+    
+  - name: readUserIdList
+    type: query
+    query: select distinct user_id from user_details where is_active=1
+    paramType: null
+
+  - name: readOrder
+    type: query
+    query: select * from order_user_mapping
+    paramType: null
+    
+  - name: createUser
+    type: statement
+    query: insert into user_details(email_id,user_name,is_active,is_deleted) values (?,?,1,0)
+    paramType: string,string
+    
+  - name: readUserById
+    type: query
+    query: select * from user_details where user_id=? and is_active=1
+    paramType: integer
+    
+  - name: readUsers
+    type: query
+    query: select * from user_details where is_active=1
+    paramType: null
+
