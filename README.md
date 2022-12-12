@@ -17,7 +17,7 @@ Configuration file : Yaml.
 -Read Order,OrderByUserId
 <br />
 <br />
-3.To check the queries resources->api.yaml
+3.To check the queries : resources->api.yaml
 <br />
 4.Can connect to multiple tenants(database) with no configuration 
 <br />
